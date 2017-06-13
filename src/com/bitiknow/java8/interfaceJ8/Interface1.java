@@ -5,7 +5,7 @@ public interface Interface1 {
 	void add(int a, int b);
 
 	default void print(String input) {
-		System.out.println("Hello " + input);
+		System.out.println("Hello Interface1" + input);
 	}
 
 }

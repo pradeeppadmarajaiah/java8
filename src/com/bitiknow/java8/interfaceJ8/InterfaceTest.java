@@ -8,12 +8,18 @@ public class InterfaceTest implements Interface1, Interface2 {
 
 	}
 
+	
+
 	@Override
 	public void print(String input) {
-		
+	
 	}
+
+
 
 	public static void main(String[] args) {
 
+		InterfaceTest interfaceTest = new InterfaceTest();
+		interfaceTest.print1("Pradeep");
 	}
 }
