@@ -7,7 +7,7 @@ public class OptionalTest {
 
 	public static void main(String[] args) {
 
-		Optional<String> optionalNam = Optional.of(name);
+		// Optional<String> optionalNam = Optional.of(name);
 		// Throws null pointer exception. Try to use "ofNullable" method
 		// System.out.println(optionalNam.get());
 
@@ -34,10 +34,17 @@ public class OptionalTest {
 			System.out.println("Name is empty");
 		}
 
+		String name = "Deep";
+		Optional<String> n = Optional.ofNullable(name);
+		OptionalTest optionalTest = new OptionalTest();
+		System.out.println(optionalTest.getname(n));
+
 	}
 
-	public String getname(String name) {
-		return name;
+	public String getname(Optional<String> name) {
+
+		return name.orElse("default");
+
 	}
 
 }
